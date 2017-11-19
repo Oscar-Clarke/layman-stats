@@ -70,7 +70,6 @@ install.packages('boot')
 library(boot)
 # Check model diagnostics
 glm.diag.plots(MOD.1)
-# don't yet understand diagnostics
 
 # Examine model output
 summary(MOD.1)
@@ -80,7 +79,6 @@ MOD.2 <- update(MOD.1,~.-SPOTS)
 
 # Examine MOD.2 diagnistics
 glm.diag.plots(MOD.2)
-# Again don't yet fully understand the diagnostics
 
 anova(MOD.1,MOD.2,test="Chi")
 # no significant difference between models
@@ -89,7 +87,6 @@ anova(MOD.1,MOD.2,test="Chi")
 summary(MOD.2)
 # Lower AIC value and length significant
 # MOD.2 minimal adequate model
-# describe model outp
 
 # allows specific points to be identified
 glm.diag.plots(MOD.2,iden=TRUE)
